@@ -2,7 +2,7 @@
     "name": "lexontech/authentication-system",
     "description": "Authentication system with Sanctum.",
     "require": {
-    
+        "laravel/sanctum": "^4.0"
     },
     "license": "MIT",
     "autoload": {
