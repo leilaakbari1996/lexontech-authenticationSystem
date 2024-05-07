@@ -12,9 +12,10 @@ class AttributeSeeder extends Seeder
      */
     public function run(): void
     {
-        RootAttributes::create([
-            'Name'   => 'authentication-system',
-            'Status' => true
+        RootAttributes::updateOrCreate([
+              'Name'   => 'authentication-system',
+            ],[
+              'Status' => true
         ]);
     }
 }
