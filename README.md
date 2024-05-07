@@ -1,6 +1,6 @@
 # lexontech-authenticationSystem
 ## leila.akbari1996@gmail.com
-###This is a authentication platform with sanctum.
+### This is a authentication platform with sanctum.
 
 # Getting Started
 
