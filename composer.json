@@ -1,0 +1,20 @@
+{
+    "name": "lexontech/authentication-system",
+    "description": "Authentication system with Sanctum.",
+    "require": {
+        "laravel/sanctum": "^4.0",
+        "lexontech/root": "dev-main"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lexontech\\AuthenticationSystem\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "leila",
+            "email": "87874568+leilaakbari1996@users.noreply.github.com"
+        }
+    ]
+}
