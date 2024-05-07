@@ -13,19 +13,20 @@
     <meta name="Author" content="Spruko Technologies Private Limited">
     <meta name="keywords" content="admin dashboard,dashboard design htmlbootstrap admin template,html admin panel,admin dashboard html,admin panel html template,bootstrap dashboard,html admin template,html dashboard,html admin dashboard template,bootstrap dashboard template,dashboard html template,bootstrap admin panel,dashboard admin bootstrap,bootstrap admin dashboard">
 
-    <link  href="{{\TransferFacade::loadAsset('/authenticationSystem/assets/libs/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" >
+    <link  href="{{\TransferFacade::loadAsset('/root/assets/libs/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" >
 
     <!-- Main Theme Js -->
-    <script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/authentication-main.js')}}"></script>
+    <script src="{{TransferFacade::loadAsset('/root/assets/js/authentication-main.js')}}"></script>
 
     <!-- Bootstrap Css -->
-    <link id="style" href="{{TransferFacade::loadAsset('/authenticationSystem/assets/libs/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" >
+    <link id="style" href="{{TransferFacade::loadAsset('/root/assets/libs/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" >
 
     <!-- Style Css -->
-    <link href="{{TransferFacade::loadAsset('/authenticationSystem/assets/css/styles.min.css')}}" rel="stylesheet" >
+    <link href="{{TransferFacade::loadAsset('/root/assets/css/styles.min.css')}}" rel="stylesheet" >
 
     <!-- Icons Css -->
-    <link href="{{TransferFacade::loadAsset('/authenticationSystem/assets/css/icons.min.css')}}" rel="stylesheet" >
+    <link href="{{TransferFacade::loadAsset('/root/assets/css/icons.min.css')}}" rel="stylesheet" >
+    <link href="{{TransferFacade::loadAsset('/root/assets/css/myStyle.css')}}" rel="stylesheet" >
     <link href="{{TransferFacade::loadAsset('/authenticationSystem/assets/css/myStyle.css')}}" rel="stylesheet" >
 
 
@@ -120,22 +121,22 @@
 </div>
 
 <!-- Custom-Switcher JS -->
-<script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/jquery-3.6.1.min.js')}}" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="{{TransferFacade::loadAsset('/root/assets/js/jquery-3.6.1.min.js')}}" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap JS -->
 
 <!-- Show Password JS -->
-<script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/sweetalert2@10')}}"></script>
+<script src="{{TransferFacade::loadAsset('/root/assets/js/sweetalert2@10')}}"></script>
 
-<script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/custom-switcher.min.js')}}"></script>
+<script src="{{TransferFacade::loadAsset('/root/assets/js/custom-switcher.min.js')}}"></script>
 
 <!-- Bootstrap JS -->
-<script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{TransferFacade::loadAsset('/root/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 <!-- Internal Two Step Verification JS -->
-<script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/two-step-verification.js')}}"></script>
+<script src="{{TransferFacade::loadAsset('/root/assets/js/two-step-verification.js')}}"></script>
 
-<script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/functions.js')}}"></script>
+<script src="{{TransferFacade::loadAsset('/root/assets/js/functions.js')}}"></script>
 <script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/timer.js')}}"></script>
 <script src="{{TransferFacade::loadAsset('/authenticationSystem/assets/js/login.js')}}"></script>
 
