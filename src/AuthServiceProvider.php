@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Lexontech\AuthenticationSystem\app\Infrastructures\Message;
 use Lexontech\AuthenticationSystem\app\Infrastructures\Transfer;
+use Lexontech\AuthenticationSystem\database\seeders\AuthenticationSystem\AttributeSeeder;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -56,5 +57,19 @@ class AuthServiceProvider extends ServiceProvider
 
         App::alias(Message::class, 'ReturnMessage');
         App::alias(Transfer::class, 'TransferFacade');
+
+        //seeder
+        $seed_list[] = AttributeSeeder::class;
+        $this->loadSeeders($seed_list);
+    }
+
+    protected function loadSeeders($seed_list)
+    {
+        $this->callAfterResolving(DatabaseSeeder::class, function ($seeder) use ($seed_list) {
+            foreach ((array) $seed_list as $path) {
+                $seeder->call($seed_list);
+                // here goes the code that will print out in console that the migration was succesful
+            }
+        });
     }
 }
