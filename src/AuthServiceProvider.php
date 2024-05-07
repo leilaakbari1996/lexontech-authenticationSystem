@@ -2,6 +2,7 @@
 
 namespace Lexontech\AuthenticationSystem;
 
+use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Schema;
