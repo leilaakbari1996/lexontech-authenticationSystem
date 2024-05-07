@@ -24,11 +24,7 @@ return [
   php artisan vendor:publish --tag
   
 
-  ## step4:
-  
- set database settings in .env
-
-  ## step5:
+## step4:
 
   php artisan migrate
 
