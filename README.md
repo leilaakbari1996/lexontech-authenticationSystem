@@ -28,4 +28,8 @@ return [
 
   php artisan migrate
 
+## step5:
+
+ php artisan db:seed
+
 
