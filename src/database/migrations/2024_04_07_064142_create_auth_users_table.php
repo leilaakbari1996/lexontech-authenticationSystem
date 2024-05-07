@@ -22,6 +22,8 @@ return new class extends Migration
             Schema::create('auth_users', function (Blueprint $table) {
                 $table->id();
                 $table->string('password');
+                $table->string('FullName')->nullable();
+                $table->string('ProfileURL')->nullable();
                 $table->rememberToken();
                  $table->string('lex_PhoneNumber')->unique();
                 $table->timestamps();
