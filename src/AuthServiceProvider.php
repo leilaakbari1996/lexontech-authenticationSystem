@@ -6,8 +6,6 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
-use Lexontech\AuthenticationSystem\app\Infrastructures\Message;
-use Lexontech\AuthenticationSystem\app\Infrastructures\Transfer;
 use Lexontech\AuthenticationSystem\database\seeders\AuthenticationSystem\AttributeSeeder;
 
 class AuthServiceProvider extends ServiceProvider
@@ -18,14 +16,6 @@ class AuthServiceProvider extends ServiceProvider
     public function register(): void
     {
         Schema::defaultStringLength(191);
-
-        // Get the AliasLoader instance
-        $loader = AliasLoader::getInstance();
-
-        // Add your aliases
-        $loader->alias('ReturnMessage', \Lexontech\Root\app\Facades\Root\Message::class);
-        $loader->alias('TransferFacade', \Lexontech\Root\app\Facades\Root\Transfer::class);
-
     }
 
     /**
@@ -54,9 +44,6 @@ class AuthServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/public' => public_path('/'),
         ], 'authPublic');
-
-        App::alias(Message::class, 'ReturnMessage');
-        App::alias(Transfer::class, 'TransferFacade');
 
         //seeder
         $seed_list[] = AttributeSeeder::class;
