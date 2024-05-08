@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use Lexontech\AuthenticationSystem\app\Http\Requests\AuthenticationSystem\LoginRequest;
 use Lexontech\AuthenticationSystem\app\Http\Requests\AuthenticationSystem\OtpRequest;
-use Lexontech\AuthenticationSystem\app\Models\AuthenticationSystem\AuthUser;
-use Lexontech\AuthenticationSystem\app\Models\AuthenticationSystem\AuthUserUser;
+use Lexontech\AuthenticationSystem\app\Models\AuthenticationSystem\User;
+use Lexontech\AuthenticationSystem\app\Models\AuthenticationSystem\UserUser;
 use Lexontech\AuthenticationSystem\app\Traits\AuthenticationSystem\SMS;
 
 
@@ -42,12 +42,12 @@ class AuthController extends Controller
         if($result['status'])
         {
             /**
-             * @var AuthUser $user;
+             * @var User $user;
              */
-            $user             = AuthUser::updateOrCreateByPhone($validatedData['PhoneNumber']);
+            $user             = User::updateOrCreateByPhone($validatedData['PhoneNumber']);
             $token            = $user->createToken('myToken')->plainTextToken;
             $data['token']    = $token;
-//            Auth::login($user,1);
+            Auth::login($user,1);
             \Illuminate\Support\Facades\Auth::logoutOtherDevices('123456');
             $data['pageURL'] = Session::get('pageUrl');
             return \ReturnMessage::successResponse($request,$result['msg'],$data);
