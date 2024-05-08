@@ -21,11 +21,11 @@ return new class extends Migration
         }else{
             Schema::create('users', function (Blueprint $table) {
                 $table->id();
-                $table->string('password');
                 $table->string('FullName')->nullable();
                 $table->string('ProfileURL')->nullable();
+                $table->string('lex_PhoneNumber')->unique();
+                $table->string('password');
                 $table->rememberToken();
-                 $table->string('lex_PhoneNumber')->unique();
                 $table->timestamps();
             });
         }
