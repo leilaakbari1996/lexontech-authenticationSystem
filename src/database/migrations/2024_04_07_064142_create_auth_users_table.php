@@ -13,13 +13,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::dropIfExists('users');
-        if(Schema::hasTable('auth_users'))
+        if(Schema::hasTable('users'))
         {
-            Schema::table('auth_users', function (Blueprint $table) {
+            Schema::table('users', function (Blueprint $table) {
                 $table->string('lex_PhoneNumber')->unique();
             });
         }else{
-            Schema::create('auth_users', function (Blueprint $table) {
+            Schema::create('users', function (Blueprint $table) {
                 $table->id();
                 $table->string('password');
                 $table->string('FullName')->nullable();
