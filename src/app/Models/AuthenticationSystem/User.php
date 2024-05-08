@@ -23,7 +23,9 @@ class User extends Authenticatable
 
     protected $fillable = [
         'lex_PhoneNumber',
-        'password'
+        'password',
+        'FullName',
+        'ProfileURL'
     ];
 
     /**
